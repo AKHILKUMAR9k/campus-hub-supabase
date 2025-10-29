@@ -1,0 +1,88 @@
+{
+  "placeholderImages": [
+    {
+      "id": "user-1",
+      "description": "Avatar for Sarah Lee",
+      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjA3MzA5NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "user-2",
+      "description": "Avatar for Mike Johnson",
+      "imageUrl": "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjA3MzA5NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "user-3",
+      "description": "Avatar for an organizer",
+      "imageUrl": "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2MDczMTI2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "club-logo-tech",
+      "description": "Tech Club Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1651340550839-3b295d930048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2lyY3VpdCUyMGJvYXJkfGVufDB8fHx8MTc2MDczNzU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "club-logo-music",
+      "description": "Music Club Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1558098329-a11cff621064?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxndWl0YXJ8ZW58MHx8fHwxNzYwNzk0MDEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "guitar"
+    },
+    {
+      "id": "club-logo-sports",
+      "description": "Sports Club Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1590227632180-80a3bf110871?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmFza2V0YmFsbHxlbnwwfHx8fDE3NjA3OTQwMTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "basketball"
+    },
+    {
+      "id": "event-poster-1",
+      "description": "Poster for Hackathon 2024",
+      "imageUrl": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2RlJTIwY29tcHV0ZXJ8ZW58MHx8fHwxNzYwNzQzNTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code computer"
+    },
+    {
+      "id": "event-poster-2",
+      "description": "Poster for Summer Music Fest",
+      "imageUrl": "https://images.unsplash.com/photo-1603910234616-3b5f4a6be2b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb25jZXJ0JTIwY3Jvd2R8ZW58MHx8fHwxNzYwNzUwNTEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "concert crowd"
+    },
+    {
+      "id": "event-poster-3",
+      "description": "Poster for Annual Sports Day",
+      "imageUrl": "https://images.unsplash.com/photo-1617602378661-9da776b6a807?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxydW5uaW5nJTIwdHJhY2t8ZW58MHx8fHwxNzYwNzMzNjA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "running track"
+    },
+    {
+      "id": "event-poster-4",
+      "description": "Poster for Art Exhibition",
+      "imageUrl": "https://images.unsplash.com/photo-1563293743-a9761195b52e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwYWludGluZ3MlMjBnYWxsZXJ5fGVufDB8fHx8MTc2MDc5NDAxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "paintings gallery"
+    },
+    {
+      "id": "event-poster-5",
+      "description": "Poster for Career Fair",
+      "imageUrl": "https://images.unsplash.com/photo-1459499362902-55a20553e082?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxqb2IlMjBpbnRlcnZpZXd8ZW58MHx8fHwxNzYwNzMxNzc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "job interview"
+    },
+    {
+      "id": "event-poster-6",
+      "description": "Poster for Cultural Night",
+      "imageUrl": "https://images.unsplash.com/photo-1556720095-a20f6b895f95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dHJhZGl0aW9uYWwlMjBkYW5jZXxlbnwwfHx8fDE3NjA3NTI0Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional dance"
+    },
+    {
+      "id": "past-event-1",
+      "description": "Photo from Code-a-thon",
+      "imageUrl": "https://images.unsplash.com/photo-1695066964145-245927509533?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZGVudHMlMjBjb2Rpbmd8ZW58MHx8fHwxNzYwNzgyNTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students coding"
+    },
+    {
+      "id": "past-event-2",
+      "description": "Photo from Battle of the Bands",
+      "imageUrl": "https://images.unsplash.com/photo-1605958611031-c91316261ab0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb2NrJTIwYmFuZHxlbnwwfHx8fDE3NjA3NzQ0ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rock band"
+    }
+  ]
+}

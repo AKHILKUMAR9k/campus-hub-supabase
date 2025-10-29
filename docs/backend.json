@@ -1,0 +1,416 @@
+
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user in the Campus Hub system, either a student or a club organizer.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the User entity."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "User's first name."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "User's last name."
+        },
+        "role": {
+          "type": "string",
+          "description": "User's role (e.g., student, club_organizer, admin)."
+        },
+        "clubIds": {
+          "type": "array",
+          "description": "References to Clubs the user belongs to. (Relationship: User N:N Club)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rollNumber": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string",
+          "format": "uri"
+        },
+        "organizerStatus": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "role"
+      ]
+    },
+    "Event": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Event",
+      "type": "object",
+      "description": "Represents an event organized by a club.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Event entity."
+        },
+        "organizerId": {
+          "type": "string"
+        },
+        "clubName": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string",
+          "description": "Name of the event."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the event."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date and time of the event.",
+          "format": "date-time"
+        },
+        "venue": {
+          "type": "string",
+          "description": "Venue of the event."
+        },
+        "registrationLink": {
+          "type": "string",
+          "description": "Link for event registration.",
+          "format": "uri"
+        },
+        "image": {
+          "type": "string",
+          "description": "URL of the event image.",
+          "format": "uri"
+        },
+        "tags": {
+          "type": "array",
+          "description": "References to Tags. (Relationship: Tag N:N Event)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "category": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string",
+          "format": "time"
+        },
+        "longDescription": {
+          "type": "string"
+        },
+        "isPast": {
+          "type": "boolean"
+        },
+        "registrationCount": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "organizerId",
+        "title",
+        "description",
+        "date",
+        "venue"
+      ]
+    },
+    "Club": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Club",
+      "type": "object",
+      "description": "Represents a club within the college.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Club entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the club."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the club."
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the club."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "category",
+        "status"
+      ]
+    },
+    "Registration": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Registration",
+      "type": "object",
+      "description": "Represents a user's registration for an event.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Registration entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N Registration)"
+        },
+        "eventId": {
+          "type": "string",
+          "description": "Reference to Event. (Relationship: Event 1:N Registration)"
+        },
+        "registrationDate": {
+          "type": "string",
+          "description": "Date of registration.",
+          "format": "date-time"
+        },
+        "fullName": {
+          "type": "string"
+        },
+        "rollNumber": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "eventId",
+        "registrationDate"
+      ]
+    },
+    "Comment": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Comment",
+      "type": "object",
+      "description": "Represents a comment on a past event.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Comment entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N Comment)"
+        },
+        "eventId": {
+          "type": "string",
+          "description": "Reference to Event. (Relationship: Event 1:N Comment)"
+        },
+        "text": {
+          "type": "string",
+          "description": "Text of the comment."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Date and time of the comment.",
+          "format": "date-time"
+        },
+        "likedBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dislikedBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "avatar": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "eventId",
+        "text",
+        "timestamp"
+      ]
+    },
+    "Reminder": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Notification",
+      "type": "object",
+      "description": "Represents a notification for a user.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Notification entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N Notification)"
+        },
+        "eventTitle": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Date and time of the notification.",
+          "format": "date-time"
+        },
+        "eventId": {
+          "type": "string",
+          "description": "Reference to Event related to this notification. (Optional)"
+        },
+        "eventDate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "eventTitle",
+        "createdAt",
+        "eventId",
+        "eventDate"
+      ]
+    },
+    "Tag": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Tag",
+      "type": "object",
+      "description": "Represents a tag or category for an event.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Tag entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the tag."
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "google.com"
+    ]
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/entities/User"
+      },
+      "description": "Stores user profiles. Path-based ownership simplifies security rules."
+    },
+    "/clubs/{clubId}": {
+      "schema": {
+        "$ref": "#/entities/Club"
+      },
+      "description": "Stores club information."
+    },
+    "/events/{eventId}": {
+      "schema": {
+        "$ref": "#/entities/Event"
+      },
+      "description": "Stores event information. Includes denormalized 'organizerId' for authorization."
+    },
+    "/users/{userId}/registrations/{registrationId}": {
+      "schema": {
+        "$ref": "#/entities/Registration"
+      },
+      "description": "Stores user registrations for events. Path-based ownership for simplicity and security."
+    },
+    "/events/{eventId}/comments/{commentId}": {
+      "schema": {
+        "$ref": "#/entities/Comment"
+      },
+      "description": "Stores comments for events. Path-based ownership for simplicity and security."
+    },
+    "/users/{userId}/reminders/{reminderId}": {
+      "schema": {
+        "$ref": "#/entities/Reminder"
+      },
+      "description": "Stores notifications (reminders) for users. Path-based ownership for simplicity and security."
+    },
+    "/tags/{tagId}": {
+      "schema": {
+        "$ref": "#/entities/Tag"
+      },
+      "description": "Stores event tags."
+    },
+     "/registrations/{registrationId}": {
+      "schema": {
+        "$ref": "#/entities/Registration"
+      },
+      "description": "Stores event registrations."
+    }
+  }
+}
+
+    
